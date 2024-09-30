@@ -2,21 +2,27 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import ContactUs from '../pages/ContactUs';
-import Psychologists from '../pages/Psychologists/Psychologists';
-import PsychologistDetails from '../pages/Psychologists/PyschologistDetails';
-
-import {Routes, Route} from 'react-router-dom'
+import Therapists from '../pages/Therapists/Therapists';
+import TherapistDetails from '../pages/Therapists/TherapistDetails';
+import MyAccount from '../Dashboard/user-account/MyAccount';
+import Dashboard from '../Dashboard/therapist-account/Dashboard';
+import { Routes, Route } from 'react-router-dom'
+import ProtectedRoute from './ProtectedRoute';
+import PaymentPage from '../pages/PaymentPage';
 
 const Routers = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Login />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/psychologists" element={<Psychologists />} />
-      <Route path="/psychologists/:id" element={<PsychologistDetails />} />
+      <Route path="/therapists" element={<Therapists />} />
+      <Route path="/therapists/:id" element={<TherapistDetails />} />
+      <Route path="/payment/:id" element={<PaymentPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Signup />} />
       <Route path="/contactus" element={<ContactUs />} />
+      <Route path="/users/profile/me" element={<ProtectedRoute allowedRoles={['patient']} ><MyAccount /></ProtectedRoute>} />
+      <Route path="/doctors/profile/me" element={<ProtectedRoute allowedRoles={['doctor']} ><Dashboard /></ProtectedRoute>} />
     </Routes>
   );
 };

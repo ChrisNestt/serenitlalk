@@ -1,16 +1,10 @@
-import React from 'react'
 import heroImg01 from "../assets/images/hero-img01.png";
-import heroImg02 from "../assets/images/hero-img02.png";
-import heroImg03 from "../assets/images/hero-img03.png";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
-import faqImg from '../assets/images/faq-img.png';
-import avatarIcon from '../assets/images/avatar-icon.png'
 import { Link } from 'react-router-dom';
 import { BsArrowRight, } from 'react-icons/bs'
 import FaqList from '../components/Faq/FaqList';
-// import Testimonial from '../components/Testimonial/Testimonial';
 
 
 const Home = () => {
@@ -24,40 +18,42 @@ const Home = () => {
             {/* hero content */}
             <div>
               <div className='lg:w-[570px]'>
-                <h1 className='text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px]'>
-                  We help patient by yes
-                </h1>
+                <h1 className='text-[36px] leading-[46px] text-textColor font-[800] md:text-[60px] md:leading-[70px]'>
+                  Discover Your Path to Mental Wellness                </h1>
                 <p className='text__para'>
-                  Hello Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, sed alias architecto atque, deserunt inventore incidunt blanditiis nostrum magni dolorum asperiores voluptatum perferendis repellendus dicta, maxime hic porro dignissimos reiciendis?
+                  Find a new way to prioritize your mental health with Serenitalk. Connect with licensed therapist online, book appointments effortlessly, and embark on a journey towards emotional well-being. Take control of your mental wellness journey today.
                 </p>
 
-                <button className='btn'>Request an Appointment</button>
+                <Link to='/therapists'>
+                  <button className='btn'>Find A Therapist</button>
+                </Link>
+
               </div>
               {/* hero counter */}
 
               <div className='mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]'>
 
                 <div>
-                  <h2 className='text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor'>
-                    30+
+                  <h2 className='text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-textColor'>
+                    10+
                   </h2>
-                  <span className='w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px]'></span>
+                  <span className='w-[100px] h-2 bg-secondaryColor rounded-full block mt-[-14px]'></span>
                   <p className='text__para'>Years of Experience</p>
                 </div>
 
                 <div>
-                  <h2 className='text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor'>
-                    15+
+                  <h2 className='text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-textColor'>
+                    75+
                   </h2>
-                  <span className='w-[100px] h-2 bg-purpleColor rounded-full block mt-[-14px]'></span>
+                  <span className='w-[100px] h-2 bg-secondaryColor rounded-full block mt-[-14px]'></span>
                   <p className='text__para'>Clinic Location</p>
                 </div>
 
                 <div>
-                  <h2 className='text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor'>
-                    100%
+                  <h2 className='text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-textColor'>
+                    99%
                   </h2>
-                  <span className='w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[-14px]'></span>
+                  <span className='w-[100px] h-2 bg-secondaryColor rounded-full block mt-[-14px]'></span>
                   <p className='text__para'>Patient Satisfaction</p>
                 </div>
 
@@ -70,10 +66,6 @@ const Home = () => {
               <div>
                 <img className='w-full' src={heroImg01} alt='' />
               </div>
-              <div className='mt-[30px]'>
-                <img src={heroImg02} alt='' className='w-full mb-[30px] ' />
-                <img src={heroImg03} alt='' className='w-full' />
-              </div>
             </div>
 
 
@@ -84,12 +76,10 @@ const Home = () => {
       {/* services section */}
       <section>
         <div className="container">
-          <div className="lg:w-[470px] mx-auto">
-            <h2 className='heading text-center'>How it works</h2>
-            <p className='text__para text-center'>How to use our services</p>
+          <div className="mx-auto">
+            <h2 className='heading text-center text-textColor'>How To Use Our Service</h2>
+            <p className='text__para text-center'>Follow these steps to successfully book and attend an appointment with our psychologists</p>
           </div>
-
-          {/* <div className='flex flex-wrap items-center justify-between flex-col md:flex-row gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]'></div> */}
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]'>
 
@@ -99,12 +89,9 @@ const Home = () => {
               </div>
 
               <div className='mt-[30px]'>
-                <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>Find a Psychologist</h2>
-                <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>World-class care for everyone. Our health System offers unmatched, expert health care. From the lab to the clinic.</p>
+                <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>1. Search a Therapist</h2>
+                <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>Find licensed therapist matching your needs, expertise, and availability.</p>
 
-                <Link to='/pyshologists' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
-                  <BsArrowRight className='group-hover:text-white w-6 h-5' />
-                </Link>
               </div>
             </div>
             <div className='py-[30px] px-5'>
@@ -113,12 +100,9 @@ const Home = () => {
               </div>
 
               <div className='mt-[30px]'>
-                <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>Find a Location</h2>
-                <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>World-class care for everyone. Our health System offers unmatched, expert health care. From the lab to the clinic.</p>
+                <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>2. Book an Appointment</h2>
+                <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>Schedule therapy sessions seamlessly according to your preferred time slots.</p>
 
-                <Link to='/pyshologists' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
-                  <BsArrowRight className='group-hover:text-white w-6 h-5' />
-                </Link>
               </div>
             </div>
             <div className='py-[30px] px-5'>
@@ -127,12 +111,9 @@ const Home = () => {
               </div>
 
               <div className='mt-[30px]'>
-                <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>Book Appointment</h2>
-                <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>World-class care for everyone. Our health System offers unmatched, expert health care. From the lab to the clinic.</p>
+                <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>3. Join Zoom Sessions</h2>
+                <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>Connect securely for virtual therapy sessions with your chosen psychologist.</p>
 
-                <Link to='/pyshologists' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
-                  <BsArrowRight className='group-hover:text-white w-6 h-5' />
-                </Link>
               </div>
             </div>
 
@@ -144,13 +125,9 @@ const Home = () => {
       <section>
         <div className='container'>
           <div className='flex justify-between gap-[50px] lg:gap-0'>
-            <div className='w-1/2 hidden md:block'>
-              <img src={faqImg} alt="" />
-            </div>
-
-            <div className='w-full md:w-1/2'>
-              <h2 className='heading'>
-                FAQ Kami
+            <div className='w-full'>
+              <h2 className='text-center heading'>
+                Frequently Asked Questions
               </h2>
 
               <FaqList />
@@ -158,6 +135,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
     </>
   );
 };

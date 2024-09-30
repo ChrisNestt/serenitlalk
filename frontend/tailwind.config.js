@@ -6,12 +6,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryColor: "#0067FF",
+        primaryColor: "#3B7A42",
         yellowColor: "#FEB60D",
         purpleColor: "#9771FF",
         irisBlueColor: "#01B5C5",
-        headingColor: "#181A1E",
-        textColor : "#4E545F"
+        headingColor: "#3B7A42",
+        textColor : "#000000",
+        secondaryColor: "#90EE90"
       },
 
       boxShadow: {
